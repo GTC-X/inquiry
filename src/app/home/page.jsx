@@ -10,10 +10,7 @@ export default function Home() {
                 <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
                     <li>You Email is successfully verified</li>
                 </ol>
-
-
             </main>
-
         </div>
     );
 }
