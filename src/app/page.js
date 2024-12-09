@@ -61,6 +61,9 @@ const EmailForm = () => {
         </button>
         {notFound &&
           <div className="mt-4">
+            <div className="mb-2">
+              <a className="text-sm text-blue-600 underline" href="https://outlook.office365.com/" target="_blank">Please follow the link to create an account or contact IT support for further assistance.</a>
+            </div>
             <a href="https://outlook.office365.com/" target="_blank">
               <img className="h-6 mx-auto cursor-pointer" src="/link.png" alt="" />
             </a>
