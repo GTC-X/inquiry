@@ -6,6 +6,7 @@ import { toast } from "react-toastify";
 
 const EmailForm = () => {
   const [email, setEmail] = useState("");
+  const [notFound, setNotFound] = useState(false)
   const router = useRouter()
 
   const handleSubmit = (e) => {
@@ -18,6 +19,7 @@ const EmailForm = () => {
       }
       else {
         toast.error("Email not found please register first")
+        setNotFound(true)
       }
     })
       .catch(err => {
@@ -57,6 +59,13 @@ const EmailForm = () => {
         >
           Submit
         </button>
+        {notFound &&
+          <div className="mt-4">
+            <a href="https://outlook.office365.com/" target="_blank">
+              <img className="h-6 mx-auto cursor-pointer" src="/link.png" alt="" />
+            </a>
+          </div>
+        }
       </form>
     </div>
   );
